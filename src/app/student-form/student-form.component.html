@@ -1,0 +1,21 @@
+<div class="div-form">
+
+    <form [formGroup]="addStudentForm" #f="ngForm">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" placeholder="Enter Name" required />
+            <mat-error>please enter valid Name</mat-error>
+        </mat-form-field>
+    <br/>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Enter Email" required />
+        <mat-error>please enter valid Email</mat-error>
+    </mat-form-field>
+    
+      </form>
+
+      <button mat-raised-button color="primary" (click)="submitStudentForm()" type="submit" [disabled]="!f.valid">Submit</button>
+      
+</div>
+
